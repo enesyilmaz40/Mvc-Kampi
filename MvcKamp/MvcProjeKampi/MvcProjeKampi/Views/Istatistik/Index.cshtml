@@ -1,0 +1,94 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@using (Html.BeginForm("Index", "IstatistikController", FormMethod.Get))
+{
+    <link href="~/IstatistikTema/css/style.css" rel="stylesheet" />
+    <link href="~/IstatistikTema/css/jqvmap.css" rel="stylesheet" />
+    <script src="~/IstatistikTema/js/Chart1.js"></script>
+    <script src="~/IstatistikTema/js/jquery.min.js"></script>
+    <script src="~/IstatistikTema/js/jquery.vmap.js"></script>
+    <script src="~/IstatistikTema/js/jquery.vmap.sampledata.js"></script>
+    <script src="~/IstatistikTema/js/jquery.vmap.world.js"></script>
+
+
+    <div class="list_of_members">
+        <div class="sales">
+
+            <div class="icon-text">
+                <h3>
+                    <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+                    @ViewBag.result
+                </h3>
+                <p>Toplam Kategori Sayısı</p>
+
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="new-users">
+            <div class="icon">
+                <i class="user1"></i>
+            </div>
+            <div class="icon-text">
+                <h3><asp:Label ID="Label2" runat="server" Text="Label"></asp:Label></h3>
+                @ViewBag.Heading
+                <p>Yazılıma Ait Başlık Sayısı</p>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="orders">
+
+            <div class="icon-text">
+                <h3><asp:Label ID="Label3" runat="server" Text="Label"></asp:Label></h3>
+                @ViewBag.Writer
+                <p>Yazarların isminde a harfi geçenler</p>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="visitors">
+            <div class="icon">
+                <i class="visit"></i>
+            </div>
+            <div class="icon-text">
+                <h3><asp:Label ID="Label4" runat="server" Text="Label"></asp:Label></h3>
+                @ViewBag.HeadingMax
+                <p>En Fazla Başlığa Sahip Kategori Sayısı</p>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="visitors">
+            <div class="icon">
+                <i class="visit"></i>
+            </div>
+            <div class="icon-text">
+                <h3><asp:Label ID="Label4" runat="server" Text="Label"></asp:Label></h3>
+
+                @ViewBag.StatusFark
+                <p>True ve False Kategori Değerlerinin Sayısal Farkı</p>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+
+        <div class="clearfix"></div>
+    </div>
+   
+  
+ 
+   
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
